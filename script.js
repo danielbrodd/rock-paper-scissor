@@ -15,22 +15,53 @@ function getComputerChoice() {
         return "Paper";
     } else if (rInt == 3) {
         return "Scissor";
-    }else return "you chose chaos!";
+    }else return "chaos!";
 }
 
-// game
-function playRound (playerSelection = prompt().toUpperCase(), computerSelection = getComputerChoice()) {
+// one round
+function playRound (playerSelection , computerSelection = getComputerChoice()) {
     let message = ''
-    
-    if (playerSelection == "ROCK" && computerSelection != "Rock") {
-        playerSelection == "ROCK" && computerSelection == "Paper" ? message = "You loose" : message = "You Win";
-    } else if (playerSelection == "PAPER" && computerSelection != "Paper") {
-        playerSelection == "PAPER" && computerSelection == "Scissor" ? message = "You loose": message = "You Win"
-    } else if (playerSelection == "SCISSOR" && computerSelection != "Scissor") {
-        playerSelection == "SCISSOR" && computerSelection == "Rock" ? message = "You loose": message = "You win";
+     playerSelection = playerSelection.toUpperCase()
+    console.log(`You played: ${playerSelection}`)
+         if (playerSelection == "ROCK" && computerSelection != "Rock") {
+            playerSelection == "ROCK" && computerSelection == "Paper" ? message = "You loose" : message = "You Win";
+        } else if (playerSelection == "PAPER" && computerSelection != "Paper") {
+            playerSelection == "PAPER" && computerSelection == "Scissor" ? message = "You loose": message = "You Win";
+        } else if (playerSelection == "SCISSOR" && computerSelection != "Scissor") {
+            playerSelection == "SCISSOR" && computerSelection == "Rock" ? message = "You loose": message = "You win";
+        }
+        else message = "DRAW!" ;
+        console.log(`The computer played: ${computerSelection.toUpperCase()}`);
+        return message ;
     }
-    else message = "DRAW!" ;
-    console.log(computerSelection);
-    return message ;
-    
+
+//  game 
+function game(n) {
+    let playerSelection = prompt()
+    for (let i = 0 ; i < n; i++) {
+        playRound(playerSelection);
+        
+    }
 }
+// 
+/* [Log] You played: PAPER (script.js, line 25)
+[Log] The computer played: PAPER (script.js, line 34)
+[Log] You played: PAPER (script.js, line 25)
+[Log] The computer played: SCISSOR (script.js, line 34)
+[Log] You played: PAPER (script.js, line 25)
+[Log] The computer played: SCISSOR (script.js, line 34)
+[Log] You played: PAPER (script.js, line 25)
+[Log] The computer played: ROCK (script.js, line 34)
+[Log] You played: PAPER (script.js, line 25)
+[Log] The computer played: PAPER (script.js, line 34)
+[Log] You played: PAPER (script.js, line 25)
+[Log] The computer played: PAPER (script.js, line 34)
+[Log] You played: PAPER (script.js, line 25)
+[Log] The computer played: ROCK (script.js, line 34)
+[Log] You played: PAPER (script.js, line 25)
+[Log] The computer played: SCISSOR (script.js, line 34)
+[Log] You played: PAPER (script.js, line 25)
+[Log] The computer played: SCISSOR (script.js, line 34)
+[Log] You played: PAPER (script.js, line 25)
+[Log] The computer played: ROCK (script.js, line 34)
+< undefined */
