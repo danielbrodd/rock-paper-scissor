@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin: auto;
+    width: 500px;
+    display: flex;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+button{
+    margin-top: 300px;
+    width: 6em;
+    height: 3em;
+    border-radius: 40px;
+    border: 0;
+
+}
