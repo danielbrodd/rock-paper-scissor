@@ -1,0 +1,44 @@
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.container{
+    margin: auto;
+    width: 500px;
+    display: flex;
+    height: 200px;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+button{
+
+    width: 6em;
+    height: 6em;
+    border-radius: 360px;
+    border: 0;
+
+}
+.scoreBoard {
+    background-color: #aaa;
+    align-items: center;
+    justify-content: top;
+    width: 500px;
+    height: 250px;
+    flex-direction: column;
+    display: flex;
+    border-radius: 360px;
+    border-bottom-left-radius: 0px;   
+    border-bottom-right-radius: 0px;   
+    padding: 40px;
+}
+.option{
+    padding-top: 40px;
+}
+.gameResult {
+    padding: 20px 40px;
+    
+}
