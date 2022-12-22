@@ -33,9 +33,9 @@ function playRound (playerSelection , computerSelection = getComputerChoice()) {
         else message = "DRAW!" ;
         result.push(message);
         
-        console.log(message);
-        console.log(`You played ${playerSelection}`);
-        console.log(result);
+        gameResult.textContent = message;
+        gameResult.textContent = (`You played ${playerSelection} result: ${message}`);
+        runningScore.textContent = (result);
         return result ;
     }
 
@@ -47,6 +47,11 @@ btn.forEach((button) => {
     button.addEventListener('click',  () => playRound(button.id))
 
 })
+
+//Score board
+
+const gameResult = document.querySelector('.gameResult')
+const runningScore = document.querySelector('.runningScore')
 
 
 

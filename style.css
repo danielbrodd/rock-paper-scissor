@@ -1,7 +1,9 @@
-body{
+.body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    
 }
 .container{
     margin: auto;
@@ -13,10 +15,19 @@ body{
     
 }
 button{
-    margin-top: 300px;
+
     width: 6em;
     height: 3em;
     border-radius: 40px;
     border: 0;
 
+}
+.scoreBoard {
+    background-color: #aaa;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 500px;
+    flex-direction: column;
+    display: flex;
 }
